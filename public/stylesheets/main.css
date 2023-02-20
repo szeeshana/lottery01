@@ -1,0 +1,29 @@
+#name {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+#name h1 {
+  letter-spacing: 7px;
+}
+
+span {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+}
+
+span:hover {
+  cursor: pointer;
+}
+    

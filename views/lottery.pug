@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='stylesheets/lottery.css')
+  div.row
+    div.col-md-4
+    div.col-md-4
+      form(action="#" onsubmit="event.preventDefault(); myFunction(this)")
+        label.col-sm-3.col-form-label(for='staticEmail') Type
+        select(name="typeData")
+          option(value="none") Select type 
+          each val,index in types 
+            option(value=index) #{val}
+        each val,index in types     
+          table.table.hide.data-tables.striped.border(class=''+index)
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') name
+            tbody
+              each val1,index1 in userByTypes[index]
+                tr
+                  th(scope='row') #{index1+1}
+                  td #{val1}
+        br
+        .temp-winner(align="center",style="font-size:24px;")
+        .main-winner(align="center", style="font-size:24px;")
+        .progress(role='progressbar' aria-label='Animated striped example' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+          #myBar.progress-bar.progress-bar-striped.progress-bar-animated(style='width: 0%')
+        input.btn.btn-primary(type='submit', value='RUN !!') 
+        button.btn.btn-primary(onclick='window.location.reload()',style="margin-left:20px;")
+          i.fa.fa-refresh
+          |   Reset  
+    
+    div.col-md-4
+    script(src="javascripts/lottery.js") 

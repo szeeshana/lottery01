@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='stylesheets/main.css')
+  div.row
+    div.col-md-3
+    div.col-md-6
+      canvas#canvas
+      #name
+        h1 Welcome to the iConiSoft Lotto :)
+        a(href='/lottery' style='width: 100%;font-size: 30px;') Click Here to START !!
+
+    div.col-md-3
+    script(src="javascripts/main.js") 
