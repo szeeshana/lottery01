@@ -1,4 +1,13 @@
 {
-    "Scrum": ["Simran","Gautam","Zeeshan", "Yancy"],
-    "Tactical": ["Dhruv","Simran","Gautam","Zeeshan", "Yancy", "Darko", "Angel", "Rolando", "Zaryab"]
+  "Scrum": ["Simran", "Gautam", "Zeeshan", "Yancy"],
+  "Tactical": [
+    "Dhruv",
+    "Simran",
+    "Gautam",
+    "Zeeshan",
+    "Yancy",
+    "Darko",
+    "Angel",
+    "Zaryab"
+  ]
 }
