@@ -15,3 +15,7 @@ input[type=text] {
   .hide {
     display: none;
   }
+
+  #waitImg {
+    display :none;
+  }

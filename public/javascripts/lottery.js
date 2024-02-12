@@ -15,6 +15,11 @@ $('select').on('change', function() {
 
 
 function myFunction(event) {
+  $(".confetti").css("display","none");
+  $("#submitBtn").css("display","none");
+  $("#resetBtn").css("display","none");
+  $("#waitImg").css("display","block");
+  $('.main-winner').html('')
     const val = $('select').val()
     $.getJSON( "json/lotto-user.json", function( data ) {
        console.log(data[val]);
@@ -34,6 +39,10 @@ function myFunction(event) {
             console.log(`And the winner is ${data[val][random]}`);
             $('.temp-winner').html('')
             $('.main-winner').html(`And the winner is ....... ${data[val][random]}`)
+            $(".confetti").css("display","flex");
+            $("#submitBtn").css("display","inline");
+            $("#resetBtn").css("display","inline");
+            $("#waitImg").css("display","none");
             clearInterval(id);
             i = 0;
           } else {
