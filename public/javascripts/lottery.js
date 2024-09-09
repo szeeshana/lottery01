@@ -1,8 +1,3 @@
-// Import the polyfill
-import ClipboardJS from 'clipboard-polyfill';
-
-// Initialize the polyfill
-ClipboardJS.init();
 var i = 0;
 
 $('select').on('change', function() {
