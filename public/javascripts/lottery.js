@@ -55,18 +55,19 @@ $('select').on('change', function() {
     if(type == "iConiSoftTacticalCall") {
       navigator.clipboard.writeText("/me Winner for the call dated "+type+" on "+getNextMonday()+" is @"+text).then(() => {
         console.log("Text copied to clipboard");
+        alert("Text copied to clipboard, you can use this text now");
       }).catch((err) => {
         console.error("Error copying text to clipboard: ", err);
       });
-      alert("Text copied to clipboard, you can use this text now");
 
     } else {
       navigator.clipboard.writeText("/me Winner for the Scrum call dated for "+type+" on "+getTomorrowOrNextMonday()+" is @"+text).then(() => {
         console.log("Text copied to clipboard");
+        alert("Text copied to clipboard, you can use this text now");
+
       }).catch((err) => {
         console.error("Error copying text to clipboard: ", err);
       });
-      alert("Text copied to clipboard, you can use this text now");
     }
    
   }
