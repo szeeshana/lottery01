@@ -1,6 +1,11 @@
 extends layout
 
 block content
+  nav(aria-label='breadcrumb')
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='/') Home
+        li.breadcrumb-item.active(aria-current='page') Lottery
   link(rel='stylesheet', href='stylesheets/lottery.css')
   .confetti
     .confetti-piece
@@ -33,7 +38,7 @@ block content
                 th(scope='col') name
             tbody
               each val1,index1 in userByTypes[index]
-                tr
+                tr(id="row"+val1+(val.replace(/ /g, "")))
                   th(scope='row') #{index1+1}
                   td #{val1}
         br

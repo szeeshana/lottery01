@@ -1,6 +1,9 @@
 extends layout
 
 block content
+  nav(aria-label='breadcrumb')
+      ol.breadcrumb
+        li.breadcrumb-item.active(aria-current='page') Home
   link(rel='stylesheet', href='stylesheets/main.css')
   div.row
     div.col-md-12
